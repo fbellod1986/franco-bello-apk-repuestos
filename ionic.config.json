@@ -1,0 +1,7 @@
+{
+  "name": "franco-bello",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Alumno</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <p id="fechaTexto">ALUMNO</p>
+        </ion-card-content>
+        <ion-button expand="block" (click)="tomarFoto()">
+            <ion-icon name="camera-outline"></ion-icon>
+            &nbsp; FOTO
+        </ion-button>
+        <ion-card-content>
+            <img [src]="picture" alt="">
+        </ion-card-content>
+    </ion-card>
+</ion-content>

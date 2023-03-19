@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Indicadores Económicos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <p id="fechaTexto">INDICADORES</p>
+        </ion-card-content>
+
+        <ion-card-content>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>DOLAR</ion-card-title>
+                    <ion-card-subtitle>{{ dolar }}</ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+            <br>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>UF</ion-card-title>
+                    <ion-card-subtitle>{{ uf }}</ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>EURO</ion-card-title>
+                    <ion-card-subtitle>{{ euro }}</ion-card-subtitle>
+                </ion-card-header>
+            </ion-card>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Listado de repuestos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <p id="fechaTexto">REPUESTOS</p>
+        </ion-card-content>
+
+        <ion-card-content>
+            <ion-list [inset]="true" *ngFor="let repuesto of repuestos">
+                <ion-item *ngIf="repuestos" [detail]="false">
+                    <div slot="start" class="img-icon-equipo" [routerLink]="'/message/' + repuesto.id">
+                        <img [src]="repuesto.img" />
+                    </div>
+                    <ion-label class="ion-text-wrap">
+                        <h2>
+                            {{ repuesto.nombre }}
+                        </h2>
+                        <p>
+                            {{ repuesto.precio }}
+                        </p>
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

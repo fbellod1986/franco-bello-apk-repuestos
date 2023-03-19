@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Listado</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <h2>Listado de alumnos</h2>
+        </ion-card-content>
+
+        <ion-card-content>
+
+            <ion-list>
+
+                <ion-item [detail]="false" *ngFor="let alumno of alumnos">
+                    <div slot="start" class="img-icon-alumno">
+                        <img [src]="alumno.img" />
+                    </div>
+                    <ion-label class="ion-text-wrap">
+                        <h2>
+                            {{ alumno.name }}
+                            <span class="date" *ngIf="alumno.destacado">
+                                <ion-note>
+                                  <ion-icon name="star" class="destacado-estrella-color tamano-icono" alt="Alumno/a destacada/o"></ion-icon>
+                                </ion-note>
+                                <ion-note>
+                                    <ion-icon name="play" *ngIf="!alumno.reproduccion" class="destacado-musica-color tamano-icono" alt="Musica" (click)="reproducir()"></ion-icon>
+                                </ion-note>
+                                <ion-note>
+                                    <ion-icon name="pause" *ngIf="alumno.reproduccion" class="destacado-musica-color tamano-icono" alt="Musica" (click)="reproducir()"></ion-icon>
+                                </ion-note>
+                              </span>
+                        </h2>
+                        <p>
+                            <strong>{{ alumno.edad }}</strong> de edad
+                        </p>
+                    </ion-label>
+                </ion-item>
+
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>
